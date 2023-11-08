@@ -47,5 +47,6 @@
     * react-router-dom : 6.18.0
 
 ## Environment Variables
+- REACT_APP_API_URL=https://property-list-ojui.onrender.com
 
-- REACT_APP_API_URL=https://property-zone.onrender.com
+The app is deployed on Render and accessible on https://property-list-ojui.onrender.com
