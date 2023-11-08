@@ -49,4 +49,4 @@
 ## Environment Variables
 - REACT_APP_API_URL=https://property-list-ojui.onrender.com
 
-The app is deployed on Render and accessible on https://property-list-ojui.onrender.com
+The app is deployed on Render and accessible on https://property-list-client.onrender.com
