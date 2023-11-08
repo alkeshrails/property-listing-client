@@ -77,7 +77,7 @@ let data;
 
   const fetchData = async () => {
     const response=await ApiCall(`${process.env.REACT_APP_API_URL}/properties/${id}`,[])
-  
+
      data=response
     if (type === "edit") {
       setFormData({
@@ -154,14 +154,15 @@ let data;
     }
 
     setErrors(newErrors);
-    console.log("Setting", formIsValid);
+
+    if (!formIsValid) alert('Please check details')
 
     return formIsValid;
   };
 
   const updateProperty = () => {
     console.log("update")
-    axios.patch(`https://property-zone.onrender.com/properties/${id}`, formData, {
+    axios.patch(`${process.env.REACT_APP_API_URL}/properties/${id}`, formData, {
       headers: {
         'Authorization': `${localStorage.getItem("auth-token")}`
       }
@@ -170,7 +171,7 @@ let data;
 
   const addProperty = () => {
     console.log("add")
-    axios.post(`https://property-zone.onrender.com/properties`, formData, {
+    axios.post(`${process.env.REACT_APP_API_URL}/properties`, formData, {
       headers: {
         'Authorization': `${localStorage.getItem("auth-token")}`
       }
